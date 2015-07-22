@@ -1,0 +1,168 @@
+<classpath>
+  <classpathentry kind="src" path="src/test/java" output="target/test-classes" including="**/*.java"/>
+  <classpathentry kind="src" path="src/test/resources" output="target/test-classes" excluding="**/*.java"/>
+  <classpathentry kind="src" path="src/main/java" including="**/*.java"/>
+  <classpathentry kind="src" path="src/main/resources" excluding="**/*.java"/>
+  <classpathentry kind="output" path="target/classes"/>
+  <classpathentry kind="var" path="M2_REPO/javax/el/el-api/2.2/el-api-2.2.jar" sourcepath="M2_REPO/javax/el/el-api/2.2/el-api-2.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/javax/el/el-api/2.2/el-api-2.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/javax/annotation/jsr250-api/1.0/jsr250-api-1.0.jar" sourcepath="M2_REPO/javax/annotation/jsr250-api/1.0/jsr250-api-1.0-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/appengine/appengine-api-1.0-sdk/1.9.23/appengine-api-1.0-sdk-1.9.23.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/appengine/appengine-api-labs/1.9.23/appengine-api-labs-1.9.23.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/appengine/appengine-api-stubs/1.9.23/appengine-api-stubs-1.9.23.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/appengine/appengine-remote-api/1.9.23/appengine-remote-api-1.9.23.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/google/appengine/appengine-testing/1.9.23/appengine-testing-1.9.23.jar"/>
+  <classpathentry kind="var" path="M2_REPO/commons-codec/commons-codec/1.4/commons-codec-1.4.jar" sourcepath="M2_REPO/commons-codec/commons-codec/1.4/commons-codec-1.4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/commons-codec/commons-codec/1.4/commons-codec-1.4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1.jar" sourcepath="M2_REPO/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/commons-fileupload/commons-fileupload/1.2.1/commons-fileupload-1.2.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-io/commons-io/2.4/commons-io-2.4.jar" sourcepath="M2_REPO/commons-io/commons-io/2.4/commons-io-2.4-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/commons-io/commons-io/2.4/commons-io-2.4-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1.jar" sourcepath="M2_REPO/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/commons-logging/commons-logging/1.1.1/commons-logging-1.1.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/glassfish/web/el-impl/2.2/el-impl-2.2.jar" sourcepath="M2_REPO/org/glassfish/web/el-impl/2.2/el-impl-2.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/glassfish/web/el-impl/2.2/el-impl-2.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/net/sf/flexjson/flexjson/3.2/flexjson-3.2.jar" sourcepath="M2_REPO/net/sf/flexjson/flexjson/3.2/flexjson-3.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/net/sf/flexjson/flexjson/3.2/flexjson-3.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/google/code/gson/gson/2.2.3/gson-2.2.3.jar" sourcepath="M2_REPO/com/google/code/gson/gson/2.2.3/gson-2.2.3-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/com/google/code/gson/gson/2.2.3/gson-2.2.3-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1.jar" sourcepath="M2_REPO/org/apache/httpcomponents/httpclient/4.1.1/httpclient-4.1.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1.jar" sourcepath="M2_REPO/org/apache/httpcomponents/httpcore/4.1/httpcore-4.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518.jar" sourcepath="M2_REPO/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/orbit/javax.servlet/2.5.0.v201103041518/javax.servlet-2.5.0.v201103041518-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/javax.servlet.jsp/2.1.0.v201105211820/javax.servlet.jsp-2.1.0.v201105211820.jar" sourcepath="M2_REPO/org/eclipse/jetty/orbit/javax.servlet.jsp/2.1.0.v201105211820/javax.servlet.jsp-2.1.0.v201105211820-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/orbit/javax.servlet.jsp/2.1.0.v201105211820/javax.servlet.jsp-2.1.0.v201105211820-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/javax.servlet.jsp.jstl/1.2.0.v201105211821/javax.servlet.jsp.jstl-1.2.0.v201105211821.jar" sourcepath="M2_REPO/org/eclipse/jetty/orbit/javax.servlet.jsp.jstl/1.2.0.v201105211821/javax.servlet.jsp.jstl-1.2.0.v201105211821-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/orbit/javax.servlet.jsp.jstl/1.2.0.v201105211821/javax.servlet.jsp.jstl-1.2.0.v201105211821-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-continuation/7.6.8.v20121106/jetty-continuation-7.6.8.v20121106.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-continuation/7.6.8.v20121106/jetty-continuation-7.6.8.v20121106-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/jetty-continuation/7.6.8.v20121106/jetty-continuation-7.6.8.v20121106-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-http/7.6.8.v20121106/jetty-http-7.6.8.v20121106.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-http/7.6.8.v20121106/jetty-http-7.6.8.v20121106-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/jetty-http/7.6.8.v20121106/jetty-http-7.6.8.v20121106-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-io/7.6.8.v20121106/jetty-io-7.6.8.v20121106.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-io/7.6.8.v20121106/jetty-io-7.6.8.v20121106-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/jetty-io/7.6.8.v20121106/jetty-io-7.6.8.v20121106-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-jsp/7.6.8.v20121106/jetty-jsp-7.6.8.v20121106.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-jsp/7.6.8.v20121106/jetty-jsp-7.6.8.v20121106-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-security/7.6.8.v20121106/jetty-security-7.6.8.v20121106.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-security/7.6.8.v20121106/jetty-security-7.6.8.v20121106-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/jetty-security/7.6.8.v20121106/jetty-security-7.6.8.v20121106-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-server/7.6.8.v20121106/jetty-server-7.6.8.v20121106.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-server/7.6.8.v20121106/jetty-server-7.6.8.v20121106-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/jetty-server/7.6.8.v20121106/jetty-server-7.6.8.v20121106-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-servlet/7.6.8.v20121106/jetty-servlet-7.6.8.v20121106.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-servlet/7.6.8.v20121106/jetty-servlet-7.6.8.v20121106-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/jetty-servlet/7.6.8.v20121106/jetty-servlet-7.6.8.v20121106-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-util/7.6.8.v20121106/jetty-util-7.6.8.v20121106.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-util/7.6.8.v20121106/jetty-util-7.6.8.v20121106-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/jetty-util/7.6.8.v20121106/jetty-util-7.6.8.v20121106-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-webapp/7.6.8.v20121106/jetty-webapp-7.6.8.v20121106.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-webapp/7.6.8.v20121106/jetty-webapp-7.6.8.v20121106-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/jetty-webapp/7.6.8.v20121106/jetty-webapp-7.6.8.v20121106-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/jetty-xml/7.6.8.v20121106/jetty-xml-7.6.8.v20121106.jar" sourcepath="M2_REPO/org/eclipse/jetty/jetty-xml/7.6.8.v20121106/jetty-xml-7.6.8.v20121106-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/jetty-xml/7.6.8.v20121106/jetty-xml-7.6.8.v20121106-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/junit/junit/4.8.1/junit-4.8.1.jar" sourcepath="M2_REPO/junit/junit/4.8.1/junit-4.8.1-sources.jar"/>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/mycontainer/mycontainer-annotations/1.6.2/mycontainer-annotations-1.6.2.jar" sourcepath="M2_REPO/com/googlecode/mycontainer/mycontainer-annotations/1.6.2/mycontainer-annotations-1.6.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/com/googlecode/mycontainer/mycontainer-annotations/1.6.2/mycontainer-annotations-1.6.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/mycontainer/mycontainer-commons/1.6.2/mycontainer-commons-1.6.2.jar" sourcepath="M2_REPO/com/googlecode/mycontainer/mycontainer-commons/1.6.2/mycontainer-commons-1.6.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/com/googlecode/mycontainer/mycontainer-commons/1.6.2/mycontainer-commons-1.6.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/mycontainer/mycontainer-gae-web/1.6.2/mycontainer-gae-web-1.6.2.jar" sourcepath="M2_REPO/com/googlecode/mycontainer/mycontainer-gae-web/1.6.2/mycontainer-gae-web-1.6.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/com/googlecode/mycontainer/mycontainer-gae-web/1.6.2/mycontainer-gae-web-1.6.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/mycontainer/mycontainer-kernel/1.6.2/mycontainer-kernel-1.6.2.jar" sourcepath="M2_REPO/com/googlecode/mycontainer/mycontainer-kernel/1.6.2/mycontainer-kernel-1.6.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/com/googlecode/mycontainer/mycontainer-kernel/1.6.2/mycontainer-kernel-1.6.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/mycontainer/mycontainer-util/1.6.2/mycontainer-util-1.6.2.jar" sourcepath="M2_REPO/com/googlecode/mycontainer/mycontainer-util/1.6.2/mycontainer-util-1.6.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/com/googlecode/mycontainer/mycontainer-util/1.6.2/mycontainer-util-1.6.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/com/googlecode/mycontainer/mycontainer-web/1.6.2/mycontainer-web-1.6.2.jar" sourcepath="M2_REPO/com/googlecode/mycontainer/mycontainer-web/1.6.2/mycontainer-web-1.6.2-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/com/googlecode/mycontainer/mycontainer-web/1.6.2/mycontainer-web-1.6.2-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/org.apache.jasper.glassfish/2.1.0.v201110031002/org.apache.jasper.glassfish-2.1.0.v201110031002.jar" sourcepath="M2_REPO/org/eclipse/jetty/orbit/org.apache.jasper.glassfish/2.1.0.v201110031002/org.apache.jasper.glassfish-2.1.0.v201110031002-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/orbit/org.apache.jasper.glassfish/2.1.0.v201110031002/org.apache.jasper.glassfish-2.1.0.v201110031002-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/org.apache.taglibs.standard.glassfish/1.2.0.v201112081803/org.apache.taglibs.standard.glassfish-1.2.0.v201112081803.jar" sourcepath="M2_REPO/org/eclipse/jetty/orbit/org.apache.taglibs.standard.glassfish/1.2.0.v201112081803/org.apache.taglibs.standard.glassfish-1.2.0.v201112081803-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/orbit/org.apache.taglibs.standard.glassfish/1.2.0.v201112081803/org.apache.taglibs.standard.glassfish-1.2.0.v201112081803-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/eclipse/jetty/orbit/org.eclipse.jdt.core/3.7.1/org.eclipse.jdt.core-3.7.1.jar" sourcepath="M2_REPO/org/eclipse/jetty/orbit/org.eclipse.jdt.core/3.7.1/org.eclipse.jdt.core-3.7.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/eclipse/jetty/orbit/org.eclipse.jdt.core/3.7.1/org.eclipse.jdt.core-3.7.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="var" path="M2_REPO/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1.jar" sourcepath="M2_REPO/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1-sources.jar">
+    <attributes>
+      <attribute value="jar:file:/home/raoni/.m2/repository/org/slf4j/slf4j-api/1.6.1/slf4j-api-1.6.1-javadoc.jar!/" name="javadoc_location"/>
+    </attributes>
+  </classpathentry>
+  <classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+</classpath>
