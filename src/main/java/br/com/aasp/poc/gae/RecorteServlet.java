@@ -16,6 +16,7 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.EntityNotFoundException;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
+import com.google.appengine.api.datastore.Text;
 import com.google.appengine.api.search.Document;
 import com.google.appengine.api.search.Field;
 import com.google.appengine.api.search.Index;
@@ -65,7 +66,7 @@ public class RecorteServlet extends HttpServlet {
 		String id = UUID.randomUUID().toString();
 
 		Entity entity = new Entity("Recorte", id);
-		entity.setProperty("texto", texto);
+		entity.setProperty("texto", new Text(texto));
 
 		AsyncDatastoreService asyncDS = DatastoreServiceFactory.getAsyncDatastoreService();
 		asyncDS.put(entity);
@@ -96,7 +97,7 @@ public class RecorteServlet extends HttpServlet {
 		try {
 			Entity entity = datastoreService.get(key);
 			resp.setContentType("application/json");
-			resp.getWriter().printf("{\"texto\": \"%s\"}", entity.getProperty("texto"));
+			resp.getWriter().printf("{\"texto\": \"%s\"}", ((Text) entity.getProperty("texto")).getValue());
 		} catch (EntityNotFoundException e) {
 			resp.setStatus(404);
 			resp.setContentType("application/json");

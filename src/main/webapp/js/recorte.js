@@ -35,7 +35,8 @@
 				$('#searchResult ul').html('');
 				for (var i = 0; i < data.length; i++) {
 					$('#searchResult ul').append(
-							"<li>" + data[i].texto + "</li>")
+							"<li>(" + data[i].score + ") - " + data[i].texto
+									+ "</li>")
 				}
 			}
 		});
