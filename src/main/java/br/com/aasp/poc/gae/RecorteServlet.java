@@ -37,7 +37,7 @@ public class RecorteServlet extends HttpServlet {
 
 		if (value == null) {
 			resp.setStatus(400);
-			resp.setContentType("text/json");
+			resp.setContentType("application/json");
 			out.printf("{\"error\": \"value required\"}");
 			return;
 		}
@@ -52,8 +52,8 @@ public class RecorteServlet extends HttpServlet {
 			if (i++ > 0) {
 				out.println(",");
 			}
-			out.printf("{\"score\": \"%d\", \"id\": \"%s\", \"texto\": \"%s\"}]", scored.getRank(), scored.getId(),
-					scored.getFields("texto"));
+			out.printf("{\"score\": \"%d\", \"id\": \"%s\", \"texto\": \"%s\"}", scored.getRank(), scored.getId(),
+					scored.getFields("texto").iterator().next().getText().replaceAll("\n", "<br/>"));
 		}
 		out.println("]");
 	}
@@ -70,7 +70,7 @@ public class RecorteServlet extends HttpServlet {
 		AsyncDatastoreService asyncDS = DatastoreServiceFactory.getAsyncDatastoreService();
 		asyncDS.put(entity);
 
-		resp.setContentType("text/json");
+		resp.setContentType("application/json");
 		resp.getWriter().printf("{\"id\": \"%s\"}", id);
 
 		Document doc = Document.newBuilder().setId(id).addField(Field.newBuilder().setName("texto").setText(texto))
@@ -85,7 +85,7 @@ public class RecorteServlet extends HttpServlet {
 
 		if (parts.length != 3) {
 			resp.setStatus(400);
-			resp.setContentType("text/json");
+			resp.setContentType("application/json");
 			resp.getWriter().printf("{\"error\": \"id required\"}");
 			return;
 		}
@@ -95,11 +95,11 @@ public class RecorteServlet extends HttpServlet {
 
 		try {
 			Entity entity = datastoreService.get(key);
-			resp.setContentType("text/json");
+			resp.setContentType("application/json");
 			resp.getWriter().printf("{\"texto\": \"%s\"}", entity.getProperty("texto"));
 		} catch (EntityNotFoundException e) {
 			resp.setStatus(404);
-			resp.setContentType("text/json");
+			resp.setContentType("application/json");
 			resp.getWriter().printf("{\"error\": \"invalid id}");
 		}
 
