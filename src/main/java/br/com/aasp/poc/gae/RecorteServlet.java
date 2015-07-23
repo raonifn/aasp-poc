@@ -1,6 +1,7 @@
 package br.com.aasp.poc.gae;
 
 import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.UUID;
 
 import javax.servlet.ServletException;
@@ -15,6 +16,15 @@ import com.google.appengine.api.datastore.Entity;
 import com.google.appengine.api.datastore.EntityNotFoundException;
 import com.google.appengine.api.datastore.Key;
 import com.google.appengine.api.datastore.KeyFactory;
+import com.google.appengine.api.search.Document;
+import com.google.appengine.api.search.Field;
+import com.google.appengine.api.search.Index;
+import com.google.appengine.api.search.IndexSpec;
+import com.google.appengine.api.search.PutException;
+import com.google.appengine.api.search.Results;
+import com.google.appengine.api.search.ScoredDocument;
+import com.google.appengine.api.search.SearchServiceFactory;
+import com.google.appengine.api.search.StatusCode;
 
 public class RecorteServlet extends HttpServlet {
 
@@ -22,7 +32,30 @@ public class RecorteServlet extends HttpServlet {
 
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-		super.doPost(req, resp);
+		String value = req.getParameter("value");
+		PrintWriter out = resp.getWriter();
+
+		if (value == null) {
+			resp.setStatus(400);
+			resp.setContentType("text/json");
+			out.printf("{\"error\": \"value required\"}");
+			return;
+		}
+
+		Results<ScoredDocument> result = find("recorte", value);
+		resp.setContentType("text/json");
+
+		resp.getWriter();
+		out.println("[");
+		int i = 0;
+		for (ScoredDocument scored : result) {
+			if (i++ > 0) {
+				out.println(",");
+			}
+			out.printf("{\"score\": \"%d\", \"id\": \"%s\", \"texto\": \"%s\"}]", scored.getRank(), scored.getId(),
+					scored.getFields("texto"));
+		}
+		out.println("]");
 	}
 
 	@Override
@@ -39,6 +72,11 @@ public class RecorteServlet extends HttpServlet {
 
 		resp.setContentType("text/json");
 		resp.getWriter().printf("{\"id\": \"%s\"}", id);
+
+		Document doc = Document.newBuilder().setId(id).addField(Field.newBuilder().setName("texto").setText(texto))
+				.build();
+		indexADocument("recorte", doc);
+
 	}
 
 	@Override
@@ -67,7 +105,7 @@ public class RecorteServlet extends HttpServlet {
 
 	}
 
-	public static String getURIWithoutContextPath(HttpServletRequest req) {
+	public String getURIWithoutContextPath(HttpServletRequest req) {
 		String uri = req.getRequestURI();
 		String contextPath = req.getContextPath();
 
@@ -76,6 +114,27 @@ public class RecorteServlet extends HttpServlet {
 		}
 
 		return uri;
+	}
+
+	public void indexADocument(String indexName, Document document) {
+		IndexSpec indexSpec = IndexSpec.newBuilder().setName(indexName).build();
+		Index index = SearchServiceFactory.getSearchService().getIndex(indexSpec);
+
+		try {
+			index.put(document);
+		} catch (PutException e) {
+			if (StatusCode.TRANSIENT_ERROR.equals(e.getOperationResult().getCode())) {
+				index.put(document);
+			}
+		}
+	}
+
+	public Results<ScoredDocument> find(String indexName, String value) {
+		IndexSpec indexSpec = IndexSpec.newBuilder().setName(indexName).build();
+		Index index = SearchServiceFactory.getSearchService().getIndex(indexSpec);
+
+		Results<ScoredDocument> result = index.search(value);
+		return result;
 	}
 
 }
